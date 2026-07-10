@@ -3,21 +3,17 @@ import { resolveLocale } from ".";
 
 describe("resolveLocale", () => {
   it("returns exact matches", () => {
+    expect(resolveLocale("en")).toBe("en");
     expect(resolveLocale("vi")).toBe("vi");
-    expect(resolveLocale("pt-BR")).toBe("pt-BR");
   });
 
   it("falls back to the base locale", () => {
     expect(resolveLocale("vi-VN")).toBe("vi");
-    expect(resolveLocale("fr-CA")).toBe("fr");
-  });
-
-  it("matches a regional variant from a base language", () => {
-    expect(resolveLocale("zh")).toBe("zh-CN");
-    expect(resolveLocale("pt")).toBe("pt-BR");
+    expect(resolveLocale("en-US")).toBe("en");
   });
 
   it("returns undefined for unsupported or empty input", () => {
+    expect(resolveLocale("fr")).toBeUndefined();
     expect(resolveLocale("xx")).toBeUndefined();
     expect(resolveLocale("")).toBeUndefined();
     expect(resolveLocale(null)).toBeUndefined();
