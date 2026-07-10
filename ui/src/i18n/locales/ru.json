@@ -5,5 +5,384 @@
       "description": "Начните с создания компании.",
       "newCompany": "Новая компания"
     }
+  },
+  "common": {
+    "theme": {
+      "switchToLight": "Switch to light mode",
+      "switchToDark": "Switch to dark mode",
+      "description": "Toggle the app appearance."
+    },
+    "breadcrumbs": {
+      "openSidebar": "Open sidebar"
+    },
+    "accountMenu": {
+      "openMenu": "Open account menu",
+      "boardFallback": "Board",
+      "signedIn": "Signed in",
+      "localWorkspaceBoard": "Local workspace board",
+      "accountBadge": "Account",
+      "localBadge": "Local",
+      "version": "Paperclip v{{version}}",
+      "viewProfile": "View profile",
+      "viewProfileDescription": "Open your activity, task, and usage ledger.",
+      "editProfile": "Edit profile",
+      "editProfileDescription": "Update your display name and avatar.",
+      "documentation": "Documentation",
+      "documentationDescription": "Open Paperclip docs in a new tab.",
+      "feedback": "Feedback",
+      "feedbackDescription": "Share feedback or report an issue.",
+      "signOut": "Sign out",
+      "signingOut": "Signing out...",
+      "signOutDescription": "End this browser session."
+    },
+    "companyMenu": {
+      "openSwitcher": "Open company switcher",
+      "openSwitcherNamed": "Open {{name}} company switcher",
+      "selectCompany": "Select company",
+      "switchCompany": "Switch company",
+      "done": "Done",
+      "edit": "Edit",
+      "reorderCompany": "Reorder {{name}}",
+      "noCompanies": "No companies",
+      "createNewCompany": "Create new company...",
+      "invitePeople": "Invite people",
+      "invitePeopleNamed": "Invite people to {{name}}",
+      "companySettings": "Company settings"
+    }
+  },
+  "sidebar": {
+    "instanceSettingsTitle": "Instance Settings",
+    "companyFallback": "Company",
+    "companySettingsTitle": "Company Settings",
+    "companySettingsSection": "Company settings",
+    "openSearch": "Open search",
+    "keepSidebarExpanded": "Keep sidebar expanded",
+    "expandSidebar": "Expand sidebar",
+    "collapseSidebar": "Collapse sidebar",
+    "resizeSidebar": "Resize sidebar",
+    "newTask": "New Task",
+    "unread": "unread",
+    "sectionActions": "{{label}} actions",
+    "collapseSection": "Collapse {{label}}",
+    "expandSection": "Expand {{label}}",
+    "section": {
+      "work": "Work",
+      "company": "Company"
+    },
+    "badge": {
+      "beta": "beta"
+    },
+    "nav": {
+      "profile": "Profile",
+      "environments": "Environments",
+      "access": "Access",
+      "heartbeats": "Heartbeats",
+      "experimental": "Experimental",
+      "plugins": "Plugins",
+      "adapters": "Adapters",
+      "cloudUpstream": "Cloud upstream",
+      "members": "Members",
+      "invites": "Invites",
+      "secrets": "Secrets",
+      "dashboard": "Dashboard",
+      "inbox": "Inbox",
+      "conferenceRoom": "Conference Room",
+      "tasks": "Tasks",
+      "cases": "Cases",
+      "routines": "Routines",
+      "pipelines": "Pipelines",
+      "goals": "Goals",
+      "artifacts": "Artifacts",
+      "skills": "Skills",
+      "workspaces": "Workspaces",
+      "projects": "Projects",
+      "org": "Org",
+      "timeline": "Timeline",
+      "costs": "Costs",
+      "activity": "Activity"
+    }
+  },
+  "settings": {
+    "nav": {
+      "settings": "Settings",
+      "instanceSettings": "Instance settings",
+      "general": "General",
+      "profile": "Profile",
+      "heartbeats": "Heartbeats",
+      "experimental": "Experimental",
+      "company": "Company"
+    },
+    "general": {
+      "title": "General",
+      "description": "Configure instance-wide preferences including log display, keyboard shortcuts, backup retention, and data sharing.",
+      "loading": "Loading general settings...",
+      "loadFailed": "Failed to load general settings.",
+      "updateFailed": "Failed to update general settings.",
+      "signOutFailed": "Failed to sign out.",
+      "language": {
+        "title": "Language",
+        "description": "Choose the display language for this browser. Stored locally, not on the server.",
+        "selectAria": "Select display language"
+      },
+      "deployment": {
+        "title": "Deployment and auth",
+        "localTrusted": "Local trusted mode is optimized for a local operator. Browser requests run as local board context and no sign-in is required.",
+        "authenticatedPublic": "Authenticated public mode requires sign-in for board access and is intended for public URLs.",
+        "authenticatedPrivate": "Authenticated private mode requires sign-in and is intended for LAN, VPN, or other private-network deployments.",
+        "authReadiness": "Auth readiness",
+        "ready": "Ready",
+        "notReady": "Not ready",
+        "bootstrapStatus": "Bootstrap status",
+        "setupRequired": "Setup required",
+        "bootstrapInvite": "Bootstrap invite",
+        "active": "Active",
+        "none": "None"
+      },
+      "censorLogs": {
+        "title": "Censor username in logs",
+        "description": "Hide the username segment in home-directory paths and similar operator-visible log output. Standalone username mentions outside of paths are not yet masked in the live transcript view. This is off by default.",
+        "toggleAria": "Toggle username log censoring"
+      },
+      "keyboardShortcuts": {
+        "title": "Keyboard shortcuts",
+        "description": "Enable app keyboard shortcuts, including inbox navigation and global shortcuts like creating tasks or toggling panels. This is off by default.",
+        "toggleAria": "Toggle keyboard shortcuts"
+      },
+      "backupRetention": {
+        "title": "Backup retention",
+        "description": "Configure how long automatic database backups are retained. Backups run roughly every hour and are compressed with gzip. Within the daily window all backups are kept; beyond that, one backup per week and one per month are preserved.",
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "monthly": "Monthly",
+        "days_one": "{{count}} day",
+        "days_other": "{{count}} days",
+        "weeks_one": "{{count}} week",
+        "weeks_other": "{{count}} weeks",
+        "months_one": "{{count}} month",
+        "months_other": "{{count}} months"
+      },
+      "feedback": {
+        "title": "AI feedback sharing",
+        "description": "Control whether thumbs up and thumbs down votes can send the voted AI output to Paperclip Labs. Votes are always saved locally.",
+        "terms": "Read our terms of service",
+        "promptNotice": "No default is saved yet. The next thumbs up or thumbs down choice will ask once and then save the answer here.",
+        "allowLabel": "Always allow",
+        "allowDescription": "Share voted AI outputs automatically.",
+        "denyLabel": "Don't allow",
+        "denyDescription": "Keep voted AI outputs local only."
+      },
+      "signOut": {
+        "title": "Sign out",
+        "description": "Sign out of this Paperclip instance. You will be redirected to the login page.",
+        "pending": "Signing out...",
+        "action": "Sign out"
+      }
+    },
+    "profile": {
+      "title": "Profile",
+      "description": "Control how your account appears in the sidebar and other board surfaces.",
+      "loading": "Loading profile...",
+      "loadFailed": "Failed to load profile.",
+      "updateFailed": "Failed to update profile.",
+      "selectCompanyBeforeUpload": "Select a company before uploading a profile avatar.",
+      "uploadAvatarFailed": "Failed to upload avatar.",
+      "removeAvatarFailed": "Failed to remove avatar.",
+      "uploadHintStored": "Stored in Paperclip file storage for {{company}}.",
+      "uploadHintSelectCompany": "Select a company to upload an avatar into Paperclip storage.",
+      "changePhoto": "Change photo",
+      "uploadPhoto": "Upload photo",
+      "remove": "Remove",
+      "noEmail": "No email",
+      "clickAvatarHint": "Click the avatar to upload a new image.",
+      "displayName": "Display name",
+      "displayNamePlaceholder": "Board",
+      "displayNameHint": "Shown in the sidebar account footer and comment author surfaces.",
+      "email": "Email",
+      "emailHint": "Email is managed by your auth session and is read-only here.",
+      "saving": "Saving...",
+      "saveProfile": "Save profile"
+    },
+    "instance": {
+      "title": "Scheduler Heartbeats",
+      "description": "Agents with a timer heartbeat enabled across all of your companies.",
+      "loading": "Loading scheduler heartbeats...",
+      "loadFailed": "Failed to load scheduler heartbeats.",
+      "updateHeartbeatFailed": "Failed to update heartbeat.",
+      "disableAllFailed": "Failed to disable all heartbeats.",
+      "unknownError": "Unknown error",
+      "disableOneFailed": "Failed to disable 1 timer heartbeat: {{detail}}",
+      "disableManyFailed_one": "Failed to disable {{count}} of {{total}} timer heartbeats. First error: {{detail}}",
+      "disableManyFailed_other": "Failed to disable {{count}} of {{total}} timer heartbeats. First error: {{detail}}",
+      "active": "active",
+      "disabled": "disabled",
+      "companyNoun_one": "company",
+      "companyNoun_other": "companies",
+      "confirmDisableAll_one": "Disable timer heartbeats for all {{count}} enabled agent?",
+      "confirmDisableAll_other": "Disable timer heartbeats for all {{count}} enabled agents?",
+      "disabling": "Disabling...",
+      "disableAll": "Disable All",
+      "empty": "No scheduler heartbeats match the current criteria.",
+      "on": "On",
+      "off": "Off",
+      "never": "never",
+      "fullAgentConfig": "Full agent config",
+      "disableTimerHeartbeat": "Disable Timer Heartbeat",
+      "enableTimerHeartbeat": "Enable Timer Heartbeat"
+    },
+    "experimental": {
+      "title": "Experimental",
+      "description": "Opt into features that are still being evaluated before they become default behavior.",
+      "loading": "Loading experimental settings...",
+      "loadFailed": "Failed to load experimental settings.",
+      "updateFailed": "Failed to update experimental settings.",
+      "previewFailed": "Failed to preview recovery tasks.",
+      "createRecoveryFailed": "Failed to create recovery tasks.",
+      "lookbackInvalid": "Lookback hours must be a whole number from 1 to 720.",
+      "warningTitle": "Experimental features may break at any time.",
+      "warningBody": "These features are opt-in and come with no compatibility guarantees. They may change, break, or be removed without notice. Avoid relying on them for critical or production workflows.",
+      "badge": "Experimental",
+      "recoveryDialog": {
+        "title": "Confirm auto-recovery",
+        "tasksMatch_one": "{{count}} recovery task match the last {{hours}} hours.",
+        "tasksMatch_other": "{{count}} recovery tasks match the last {{hours}} hours.",
+        "checking": "Checking recovery candidates before enabling.",
+        "empty": "No recovery tasks would be created right now. Auto-recovery can still run for future liveness incidents in this window.",
+        "recoveryTarget": "Recovery target:",
+        "skippedOutsideLookback_one": "{{count}} current finding is outside the configured lookback and will not be touched.",
+        "skippedOutsideLookback_other": "{{count}} current findings are outside the configured lookback and will not be touched.",
+        "cancel": "Cancel",
+        "enableOnly": "Enable only",
+        "enableAndCreate_one": "Enable and create {{count}}",
+        "enableAndCreate_other": "Enable and create {{count}}",
+        "enable": "Enable"
+      },
+      "worktreeRun": {
+        "title": "Run tasks in this worktree",
+        "description": "This is an isolated git-worktree preview instance. By default it does not execute agent runs; tasks stay queued so previews never self-run work. Turn this on to let the heartbeat scheduler execute runs here. This setting only affects this worktree instance and is ignored outside a worktree.",
+        "ariaLabel": "Toggle worktree run execution setting"
+      },
+      "cases": {
+        "title": "Cases",
+        "description": "Durable work products (blog posts, tweet storms…) that tasks create and iterate on. Adds the Cases tab and the agent case API.",
+        "note": "Turning Cases off hides the tab and blocks the case API; existing case data is kept.",
+        "ariaLabel": "Toggle cases experimental setting"
+      },
+      "environments": {
+        "title": "Enable Environments",
+        "description": "Show environment management in company settings and allow project and agent environment assignment controls.",
+        "ariaLabel": "Toggle environments experimental setting"
+      },
+      "builtInAgents": {
+        "title": "Built-in Agents",
+        "description": "Show Paperclip-managed built-in agent surfaces, including built-in roster badges, the Built-in agents tab, and built-in agent setup controls.",
+        "ariaLabel": "Toggle built-in agents experimental setting"
+      },
+      "fileViewer": {
+        "title": "Experimental File Viewer",
+        "description": "Show task detail controls for browsing and previewing workspace files relative to a task.",
+        "ariaLabel": "Toggle experimental file viewer setting"
+      },
+      "externalObjects": {
+        "title": "Enable External Objects",
+        "description": "Detect external URLs in issues and show resolved status for pull requests, tickets, and other referenced work objects.",
+        "ariaLabel": "Toggle external objects experimental setting"
+      },
+      "goalsSidebar": {
+        "title": "Goals Sidebar Link",
+        "description": "Restore the Goals item in the main sidebar while the goals surface is being evaluated.",
+        "ariaLabel": "Toggle goals sidebar link experimental setting"
+      },
+      "isolatedWorkspaces": {
+        "title": "Enable Isolated Workspaces",
+        "description": "Show execution workspace controls in project configuration and allow isolated workspace behavior for new and existing task runs.",
+        "ariaLabel": "Toggle isolated workspaces experimental setting"
+      },
+      "conferenceRoom": {
+        "title": "Conference Room Chat",
+        "description": "Adds a Conference Room — one chat where you and your whole team work together — plus the live activity feed and the redesigned onboarding. Also restyles task threads as chat bubbles. Turn off anytime to restore the classic UI.",
+        "ariaLabel": "Toggle conference room chat experimental setting"
+      },
+      "planDecomposition": {
+        "title": "Task Plan Decomposition Panel",
+        "description": "Show accepted-plan decomposition history on task detail pages. Intended for debugging and validating subtask creation behavior while the presentation is still being refined.",
+        "ariaLabel": "Toggle task plan decomposition panel experimental setting"
+      },
+      "taskWatchdogs": {
+        "title": "Task Watchdogs",
+        "description": "Show task detail controls for configuring watchdog agents that verify stopped task subtrees and restore live paths when work should continue.",
+        "ariaLabel": "Toggle task watchdogs experimental setting"
+      },
+      "cloudSync": {
+        "title": "Cloud Sync",
+        "description": "Show local Paperclip Cloud upstream connection, preview, push, retry, and activation review surfaces. Saved connections and run history are preserved when this is disabled.",
+        "ariaLabel": "Toggle cloud sync experimental setting"
+      },
+      "serverInfo": {
+        "title": "Server Info Debug View",
+        "description": "Show a \"Server\" section in the account drawer with the current server restart time and running commit.",
+        "ariaLabel": "Toggle server info debug view experimental setting"
+      },
+      "autoRestart": {
+        "title": "Auto-Restart Dev Server When Idle",
+        "description": "In `pnpm dev:once`, wait for all queued and running local agent runs to finish, then restart the server automatically when backend changes or migrations make the current boot stale.",
+        "ariaLabel": "Toggle guarded dev-server auto-restart"
+      },
+      "autoRecovery": {
+        "title": "Auto-Create Recovery Tasks",
+        "description": "Let the heartbeat scheduler create recovery tasks for task dependency chains found inside the configured lookback window.",
+        "ariaLabel": "Toggle task graph liveness auto-recovery",
+        "lookbackHours": "Lookback hours",
+        "saveHours": "Save hours",
+        "preview": "Preview",
+        "runNow": "Run now",
+        "currentWindow_one": "Current window: last {{count}} hour.",
+        "currentWindow_other": "Current window: last {{count}} hours."
+      }
+    },
+    "company": {
+      "title": "Company Settings",
+      "noCompanySelected": "No company selected. Select a company from the switcher above.",
+      "companyName": "Company name",
+      "companyNameHint": "The display name for your company.",
+      "description": "Description",
+      "descriptionHint": "Optional description shown in the company profile.",
+      "descriptionPlaceholder": "Optional company description",
+      "appearance": "Appearance",
+      "logo": "Logo",
+      "logoHint": "Upload a PNG, JPEG, WEBP, GIF, or SVG logo image.",
+      "removingLogo": "Removing...",
+      "removeLogo": "Remove logo",
+      "logoUploadFailed": "Logo upload failed",
+      "uploadingLogo": "Uploading logo...",
+      "brandColor": "Brand color",
+      "brandColorHint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+      "brandColorAuto": "Auto",
+      "clear": "Clear",
+      "attachmentSizeLimit": "Attachment size limit",
+      "attachmentSizeLimitHint": "Accepted range: 1-{{max}} MiB.",
+      "mib": "MiB",
+      "attachmentSizeLimitError": "Enter a whole number from 1 to {{max}}.",
+      "saving": "Saving...",
+      "saveChanges": "Save changes",
+      "saved": "Saved",
+      "saveFailed": "Failed to save",
+      "hiring": "Hiring",
+      "requireBoardApproval": "Require board approval for new hires",
+      "requireBoardApprovalHint": "New agent hires stay pending until approved by board.",
+      "companyPackages": "Company Packages",
+      "importExportMovedPrefix": "Import and export have moved to dedicated pages accessible from the",
+      "orgChart": "Org Chart",
+      "importExportMovedSuffix": "header.",
+      "sendToCloud": "Send to Paperclip Cloud",
+      "export": "Export",
+      "import": "Import",
+      "dangerZone": "Danger Zone",
+      "archiveDescription": "Archive this company to hide it from the sidebar. This persists in the database.",
+      "archiveConfirm": "Archive company \"{{name}}\"? It will be hidden from the sidebar.",
+      "archiving": "Archiving...",
+      "alreadyArchived": "Already archived",
+      "archiveCompany": "Archive company",
+      "archiveFailed": "Failed to archive company"
+    }
   }
 }

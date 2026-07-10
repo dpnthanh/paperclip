@@ -5,5 +5,384 @@
       "description": "Bắt đầu bằng cách tạo một công ty.",
       "newCompany": "Công ty mới"
     }
+  },
+  "common": {
+    "theme": {
+      "switchToLight": "Chuyển sang chế độ sáng",
+      "switchToDark": "Chuyển sang chế độ tối",
+      "description": "Bật/tắt giao diện ứng dụng."
+    },
+    "breadcrumbs": {
+      "openSidebar": "Mở thanh bên"
+    },
+    "accountMenu": {
+      "openMenu": "Mở menu tài khoản",
+      "boardFallback": "Bảng điều hành",
+      "signedIn": "Đã đăng nhập",
+      "localWorkspaceBoard": "Bảng không gian làm việc cục bộ",
+      "accountBadge": "Tài khoản",
+      "localBadge": "Cục bộ",
+      "version": "Paperclip v{{version}}",
+      "viewProfile": "Xem hồ sơ",
+      "viewProfileDescription": "Mở nhật ký hoạt động, tác vụ và mức sử dụng của bạn.",
+      "editProfile": "Chỉnh sửa hồ sơ",
+      "editProfileDescription": "Cập nhật tên hiển thị và ảnh đại diện của bạn.",
+      "documentation": "Tài liệu",
+      "documentationDescription": "Mở tài liệu Paperclip trong tab mới.",
+      "feedback": "Phản hồi",
+      "feedbackDescription": "Chia sẻ phản hồi hoặc báo cáo sự cố.",
+      "signOut": "Đăng xuất",
+      "signingOut": "Đang đăng xuất...",
+      "signOutDescription": "Kết thúc phiên trình duyệt này."
+    },
+    "companyMenu": {
+      "openSwitcher": "Mở bộ chuyển công ty",
+      "openSwitcherNamed": "Mở bộ chuyển công ty {{name}}",
+      "selectCompany": "Chọn công ty",
+      "switchCompany": "Chuyển công ty",
+      "done": "Xong",
+      "edit": "Chỉnh sửa",
+      "reorderCompany": "Sắp xếp lại {{name}}",
+      "noCompanies": "Không có công ty",
+      "createNewCompany": "Tạo công ty mới...",
+      "invitePeople": "Mời người dùng",
+      "invitePeopleNamed": "Mời người dùng vào {{name}}",
+      "companySettings": "Cài đặt công ty"
+    }
+  },
+  "sidebar": {
+    "instanceSettingsTitle": "Cài đặt phiên bản",
+    "companyFallback": "Công ty",
+    "companySettingsTitle": "Cài đặt công ty",
+    "companySettingsSection": "Cài đặt công ty",
+    "openSearch": "Mở tìm kiếm",
+    "keepSidebarExpanded": "Giữ thanh bên mở rộng",
+    "expandSidebar": "Mở rộng thanh bên",
+    "collapseSidebar": "Thu gọn thanh bên",
+    "resizeSidebar": "Đổi kích thước thanh bên",
+    "newTask": "Tác vụ mới",
+    "unread": "chưa đọc",
+    "sectionActions": "Thao tác {{label}}",
+    "collapseSection": "Thu gọn {{label}}",
+    "expandSection": "Mở rộng {{label}}",
+    "section": {
+      "work": "Công việc",
+      "company": "Công ty"
+    },
+    "badge": {
+      "beta": "beta"
+    },
+    "nav": {
+      "profile": "Hồ sơ",
+      "environments": "Môi trường",
+      "access": "Truy cập",
+      "heartbeats": "Nhịp hoạt động",
+      "experimental": "Thử nghiệm",
+      "plugins": "Tiện ích mở rộng",
+      "adapters": "Bộ điều hợp",
+      "cloudUpstream": "Nguồn đám mây",
+      "members": "Thành viên",
+      "invites": "Lời mời",
+      "secrets": "Khóa bí mật",
+      "dashboard": "Bảng điều khiển",
+      "inbox": "Hộp thư",
+      "conferenceRoom": "Phòng họp",
+      "tasks": "Tác vụ",
+      "cases": "Hồ sơ",
+      "routines": "Tác vụ định kỳ",
+      "pipelines": "Quy trình",
+      "goals": "Mục tiêu",
+      "artifacts": "Sản phẩm",
+      "skills": "Kỹ năng",
+      "workspaces": "Không gian làm việc",
+      "projects": "Dự án",
+      "org": "Tổ chức",
+      "timeline": "Dòng thời gian",
+      "costs": "Chi phí",
+      "activity": "Hoạt động"
+    }
+  },
+  "settings": {
+    "nav": {
+      "settings": "Cài đặt",
+      "instanceSettings": "Cài đặt phiên bản",
+      "general": "Chung",
+      "profile": "Hồ sơ",
+      "heartbeats": "Nhịp hoạt động",
+      "experimental": "Thử nghiệm",
+      "company": "Công ty"
+    },
+    "general": {
+      "title": "Chung",
+      "description": "Cấu hình các tùy chọn trên toàn phiên bản bao gồm hiển thị nhật ký, phím tắt, lưu giữ bản sao lưu và chia sẻ dữ liệu.",
+      "loading": "Đang tải cài đặt chung...",
+      "loadFailed": "Không tải được cài đặt chung.",
+      "updateFailed": "Không cập nhật được cài đặt chung.",
+      "signOutFailed": "Không đăng xuất được.",
+      "language": {
+        "title": "Ngôn ngữ",
+        "description": "Chọn ngôn ngữ hiển thị cho trình duyệt này. Được lưu cục bộ, không lưu trên máy chủ.",
+        "selectAria": "Chọn ngôn ngữ hiển thị"
+      },
+      "deployment": {
+        "title": "Triển khai và xác thực",
+        "localTrusted": "Chế độ tin cậy cục bộ được tối ưu cho người vận hành cục bộ. Các yêu cầu từ trình duyệt chạy trong ngữ cảnh bảng cục bộ và không cần đăng nhập.",
+        "authenticatedPublic": "Chế độ công khai có xác thực yêu cầu đăng nhập để truy cập bảng và dành cho các URL công khai.",
+        "authenticatedPrivate": "Chế độ riêng tư có xác thực yêu cầu đăng nhập và dành cho các triển khai qua LAN, VPN hoặc mạng riêng khác.",
+        "authReadiness": "Trạng thái sẵn sàng xác thực",
+        "ready": "Sẵn sàng",
+        "notReady": "Chưa sẵn sàng",
+        "bootstrapStatus": "Trạng thái khởi tạo",
+        "setupRequired": "Cần thiết lập",
+        "bootstrapInvite": "Lời mời khởi tạo",
+        "active": "Đang hoạt động",
+        "none": "Không có"
+      },
+      "censorLogs": {
+        "title": "Ẩn tên người dùng trong nhật ký",
+        "description": "Ẩn phần tên người dùng trong các đường dẫn thư mục chính và đầu ra nhật ký tương tự mà người vận hành thấy được. Việc nhắc tên người dùng độc lập ngoài đường dẫn hiện chưa được che trong chế độ xem bản ghi trực tiếp. Mặc định tắt.",
+        "toggleAria": "Bật/tắt ẩn tên người dùng trong nhật ký"
+      },
+      "keyboardShortcuts": {
+        "title": "Phím tắt",
+        "description": "Bật phím tắt ứng dụng, bao gồm điều hướng hộp thư và các phím tắt toàn cục như tạo tác vụ hoặc bật/tắt bảng điều khiển. Mặc định tắt.",
+        "toggleAria": "Bật/tắt phím tắt"
+      },
+      "backupRetention": {
+        "title": "Lưu giữ bản sao lưu",
+        "description": "Cấu hình thời gian lưu giữ các bản sao lưu cơ sở dữ liệu tự động. Bản sao lưu chạy khoảng mỗi giờ và được nén bằng gzip. Trong khung ngày, tất cả bản sao lưu đều được giữ; ngoài khung đó, mỗi tuần giữ một bản và mỗi tháng giữ một bản.",
+        "daily": "Hàng ngày",
+        "weekly": "Hàng tuần",
+        "monthly": "Hàng tháng",
+        "days_one": "{{count}} ngày",
+        "days_other": "{{count}} ngày",
+        "weeks_one": "{{count}} tuần",
+        "weeks_other": "{{count}} tuần",
+        "months_one": "{{count}} tháng",
+        "months_other": "{{count}} tháng"
+      },
+      "feedback": {
+        "title": "Chia sẻ phản hồi AI",
+        "description": "Kiểm soát việc bình chọn thích và không thích có thể gửi đầu ra AI được bình chọn đến Paperclip Labs hay không. Bình chọn luôn được lưu cục bộ.",
+        "terms": "Đọc điều khoản dịch vụ của chúng tôi",
+        "promptNotice": "Chưa có mặc định nào được lưu. Lần bình chọn thích hoặc không thích tiếp theo sẽ hỏi một lần rồi lưu câu trả lời tại đây.",
+        "allowLabel": "Luôn cho phép",
+        "allowDescription": "Tự động chia sẻ các đầu ra AI được bình chọn.",
+        "denyLabel": "Không cho phép",
+        "denyDescription": "Chỉ giữ các đầu ra AI được bình chọn ở cục bộ."
+      },
+      "signOut": {
+        "title": "Đăng xuất",
+        "description": "Đăng xuất khỏi phiên bản Paperclip này. Bạn sẽ được chuyển hướng đến trang đăng nhập.",
+        "pending": "Đang đăng xuất...",
+        "action": "Đăng xuất"
+      }
+    },
+    "profile": {
+      "title": "Hồ sơ",
+      "description": "Kiểm soát cách tài khoản của bạn hiển thị trong thanh bên và các bề mặt khác của bảng.",
+      "loading": "Đang tải hồ sơ...",
+      "loadFailed": "Không tải được hồ sơ.",
+      "updateFailed": "Không cập nhật được hồ sơ.",
+      "selectCompanyBeforeUpload": "Chọn một công ty trước khi tải lên ảnh đại diện hồ sơ.",
+      "uploadAvatarFailed": "Không tải lên được ảnh đại diện.",
+      "removeAvatarFailed": "Không gỡ được ảnh đại diện.",
+      "uploadHintStored": "Được lưu trong kho lưu trữ tệp Paperclip cho {{company}}.",
+      "uploadHintSelectCompany": "Chọn một công ty để tải ảnh đại diện lên kho lưu trữ Paperclip.",
+      "changePhoto": "Đổi ảnh",
+      "uploadPhoto": "Tải ảnh lên",
+      "remove": "Gỡ",
+      "noEmail": "Không có email",
+      "clickAvatarHint": "Nhấp vào ảnh đại diện để tải lên hình mới.",
+      "displayName": "Tên hiển thị",
+      "displayNamePlaceholder": "Bảng điều hành",
+      "displayNameHint": "Hiển thị ở chân trang tài khoản trong thanh bên và các bề mặt tác giả bình luận.",
+      "email": "Email",
+      "emailHint": "Email do phiên xác thực của bạn quản lý và chỉ đọc tại đây.",
+      "saving": "Đang lưu...",
+      "saveProfile": "Lưu hồ sơ"
+    },
+    "instance": {
+      "title": "Nhịp hoạt động của bộ lập lịch",
+      "description": "Các agent có nhịp hẹn giờ được bật trên tất cả công ty của bạn.",
+      "loading": "Đang tải nhịp hoạt động của bộ lập lịch...",
+      "loadFailed": "Không tải được nhịp hoạt động của bộ lập lịch.",
+      "updateHeartbeatFailed": "Không cập nhật được nhịp hoạt động.",
+      "disableAllFailed": "Không tắt được tất cả nhịp hoạt động.",
+      "unknownError": "Lỗi không xác định",
+      "disableOneFailed": "Không tắt được 1 nhịp hẹn giờ: {{detail}}",
+      "disableManyFailed_one": "Không tắt được {{count}} trong {{total}} nhịp hẹn giờ. Lỗi đầu tiên: {{detail}}",
+      "disableManyFailed_other": "Không tắt được {{count}} trong {{total}} nhịp hẹn giờ. Lỗi đầu tiên: {{detail}}",
+      "active": "đang hoạt động",
+      "disabled": "đã tắt",
+      "companyNoun_one": "công ty",
+      "companyNoun_other": "công ty",
+      "confirmDisableAll_one": "Tắt nhịp hẹn giờ cho tất cả {{count}} agent đã bật?",
+      "confirmDisableAll_other": "Tắt nhịp hẹn giờ cho tất cả {{count}} agent đã bật?",
+      "disabling": "Đang tắt...",
+      "disableAll": "Tắt tất cả",
+      "empty": "Không có nhịp hoạt động nào khớp với tiêu chí hiện tại.",
+      "on": "Bật",
+      "off": "Tắt",
+      "never": "không bao giờ",
+      "fullAgentConfig": "Cấu hình agent đầy đủ",
+      "disableTimerHeartbeat": "Tắt nhịp hẹn giờ",
+      "enableTimerHeartbeat": "Bật nhịp hẹn giờ"
+    },
+    "experimental": {
+      "title": "Thử nghiệm",
+      "description": "Tham gia các tính năng vẫn đang được đánh giá trước khi trở thành hành vi mặc định.",
+      "loading": "Đang tải cài đặt thử nghiệm...",
+      "loadFailed": "Không tải được cài đặt thử nghiệm.",
+      "updateFailed": "Không cập nhật được cài đặt thử nghiệm.",
+      "previewFailed": "Không xem trước được các tác vụ khôi phục.",
+      "createRecoveryFailed": "Không tạo được các tác vụ khôi phục.",
+      "lookbackInvalid": "Số giờ nhìn lại phải là số nguyên từ 1 đến 720.",
+      "warningTitle": "Các tính năng thử nghiệm có thể hỏng bất cứ lúc nào.",
+      "warningBody": "Các tính năng này là tùy chọn và không có bảo đảm tương thích. Chúng có thể thay đổi, hỏng hoặc bị gỡ bỏ mà không báo trước. Tránh phụ thuộc vào chúng cho các quy trình quan trọng hoặc chính thức.",
+      "badge": "Thử nghiệm",
+      "recoveryDialog": {
+        "title": "Xác nhận tự động khôi phục",
+        "tasksMatch_one": "{{count}} tác vụ khôi phục khớp với {{hours}} giờ gần nhất.",
+        "tasksMatch_other": "{{count}} tác vụ khôi phục khớp với {{hours}} giờ gần nhất.",
+        "checking": "Đang kiểm tra các ứng viên khôi phục trước khi bật.",
+        "empty": "Sẽ không có tác vụ khôi phục nào được tạo ngay bây giờ. Tự động khôi phục vẫn có thể chạy cho các sự cố hoạt động trong tương lai trong khung này.",
+        "recoveryTarget": "Mục tiêu khôi phục:",
+        "skippedOutsideLookback_one": "{{count}} phát hiện hiện tại nằm ngoài khung nhìn lại đã cấu hình và sẽ không bị tác động.",
+        "skippedOutsideLookback_other": "{{count}} phát hiện hiện tại nằm ngoài khung nhìn lại đã cấu hình và sẽ không bị tác động.",
+        "cancel": "Hủy",
+        "enableOnly": "Chỉ bật",
+        "enableAndCreate_one": "Bật và tạo {{count}}",
+        "enableAndCreate_other": "Bật và tạo {{count}}",
+        "enable": "Bật"
+      },
+      "worktreeRun": {
+        "title": "Chạy tác vụ trong worktree này",
+        "description": "Đây là phiên bản xem trước worktree git độc lập. Theo mặc định nó không thực thi các lượt chạy agent; tác vụ vẫn nằm trong hàng đợi để bản xem trước không bao giờ tự chạy công việc. Bật tùy chọn này để cho phép bộ lập lịch nhịp hoạt động thực thi các lượt chạy tại đây. Cài đặt này chỉ ảnh hưởng đến phiên bản worktree này và bị bỏ qua bên ngoài worktree.",
+        "ariaLabel": "Bật/tắt cài đặt thực thi chạy worktree"
+      },
+      "cases": {
+        "title": "Hồ sơ",
+        "description": "Các sản phẩm công việc bền vững (bài blog, chuỗi tweet…) mà tác vụ tạo ra và lặp lại. Thêm tab Hồ sơ và API hồ sơ cho agent.",
+        "note": "Tắt Hồ sơ sẽ ẩn tab và chặn API hồ sơ; dữ liệu hồ sơ hiện có vẫn được giữ.",
+        "ariaLabel": "Bật/tắt cài đặt thử nghiệm hồ sơ"
+      },
+      "environments": {
+        "title": "Bật môi trường",
+        "description": "Hiển thị quản lý môi trường trong cài đặt công ty và cho phép các điều khiển gán môi trường cho dự án và agent.",
+        "ariaLabel": "Bật/tắt cài đặt thử nghiệm môi trường"
+      },
+      "builtInAgents": {
+        "title": "Agent tích hợp sẵn",
+        "description": "Hiển thị các bề mặt agent tích hợp sẵn do Paperclip quản lý, bao gồm huy hiệu danh sách tích hợp, tab Agent tích hợp sẵn và các điều khiển thiết lập agent tích hợp sẵn.",
+        "ariaLabel": "Bật/tắt cài đặt thử nghiệm agent tích hợp sẵn"
+      },
+      "fileViewer": {
+        "title": "Trình xem tệp thử nghiệm",
+        "description": "Hiển thị các điều khiển chi tiết tác vụ để duyệt và xem trước các tệp không gian làm việc liên quan đến một tác vụ.",
+        "ariaLabel": "Bật/tắt cài đặt trình xem tệp thử nghiệm"
+      },
+      "externalObjects": {
+        "title": "Bật đối tượng bên ngoài",
+        "description": "Phát hiện các URL bên ngoài trong vấn đề và hiển thị trạng thái đã giải quyết cho pull request, phiếu và các đối tượng công việc được tham chiếu khác.",
+        "ariaLabel": "Bật/tắt cài đặt thử nghiệm đối tượng bên ngoài"
+      },
+      "goalsSidebar": {
+        "title": "Liên kết Mục tiêu trên thanh bên",
+        "description": "Khôi phục mục Mục tiêu trong thanh bên chính trong khi bề mặt mục tiêu đang được đánh giá.",
+        "ariaLabel": "Bật/tắt cài đặt thử nghiệm liên kết mục tiêu trên thanh bên"
+      },
+      "isolatedWorkspaces": {
+        "title": "Bật không gian làm việc độc lập",
+        "description": "Hiển thị các điều khiển không gian làm việc thực thi trong cấu hình dự án và cho phép hành vi không gian làm việc độc lập cho các lượt chạy tác vụ mới và hiện có.",
+        "ariaLabel": "Bật/tắt cài đặt thử nghiệm không gian làm việc độc lập"
+      },
+      "conferenceRoom": {
+        "title": "Trò chuyện Phòng họp",
+        "description": "Thêm một Phòng họp — một cuộc trò chuyện nơi bạn và cả nhóm cùng làm việc — cùng với luồng hoạt động trực tiếp và quá trình giới thiệu được thiết kế lại. Cũng đổi kiểu các luồng tác vụ thành bong bóng trò chuyện. Tắt bất cứ lúc nào để khôi phục giao diện cổ điển.",
+        "ariaLabel": "Bật/tắt cài đặt thử nghiệm trò chuyện phòng họp"
+      },
+      "planDecomposition": {
+        "title": "Bảng phân rã kế hoạch tác vụ",
+        "description": "Hiển thị lịch sử phân rã kế hoạch đã chấp nhận trên các trang chi tiết tác vụ. Dùng để gỡ lỗi và xác thực hành vi tạo tác vụ con trong khi cách trình bày vẫn đang được tinh chỉnh.",
+        "ariaLabel": "Bật/tắt cài đặt thử nghiệm bảng phân rã kế hoạch tác vụ"
+      },
+      "taskWatchdogs": {
+        "title": "Bộ giám sát tác vụ",
+        "description": "Hiển thị các điều khiển chi tiết tác vụ để cấu hình các agent giám sát nhằm xác minh các nhánh tác vụ đã dừng và khôi phục các đường hoạt động khi công việc cần tiếp tục.",
+        "ariaLabel": "Bật/tắt cài đặt thử nghiệm bộ giám sát tác vụ"
+      },
+      "cloudSync": {
+        "title": "Đồng bộ đám mây",
+        "description": "Hiển thị các bề mặt kết nối nguồn Paperclip Cloud cục bộ, xem trước, đẩy, thử lại và xem xét kích hoạt. Các kết nối đã lưu và lịch sử chạy được giữ lại khi tính năng này bị tắt.",
+        "ariaLabel": "Bật/tắt cài đặt thử nghiệm đồng bộ đám mây"
+      },
+      "serverInfo": {
+        "title": "Chế độ xem gỡ lỗi thông tin máy chủ",
+        "description": "Hiển thị mục \"Máy chủ\" trong ngăn tài khoản với thời gian khởi động lại máy chủ hiện tại và commit đang chạy.",
+        "ariaLabel": "Bật/tắt cài đặt thử nghiệm chế độ xem gỡ lỗi thông tin máy chủ"
+      },
+      "autoRestart": {
+        "title": "Tự động khởi động lại máy chủ dev khi rảnh",
+        "description": "Trong `pnpm dev:once`, chờ tất cả các lượt chạy agent cục bộ trong hàng đợi và đang chạy hoàn tất, sau đó tự động khởi động lại máy chủ khi các thay đổi backend hoặc migration khiến lần khởi động hiện tại trở nên cũ.",
+        "ariaLabel": "Bật/tắt tự động khởi động lại máy chủ dev có bảo vệ"
+      },
+      "autoRecovery": {
+        "title": "Tự động tạo tác vụ khôi phục",
+        "description": "Cho phép bộ lập lịch nhịp hoạt động tạo các tác vụ khôi phục cho các chuỗi phụ thuộc tác vụ được tìm thấy trong khung nhìn lại đã cấu hình.",
+        "ariaLabel": "Bật/tắt tự động khôi phục hoạt động của đồ thị tác vụ",
+        "lookbackHours": "Số giờ nhìn lại",
+        "saveHours": "Lưu số giờ",
+        "preview": "Xem trước",
+        "runNow": "Chạy ngay",
+        "currentWindow_one": "Khung hiện tại: {{count}} giờ gần nhất.",
+        "currentWindow_other": "Khung hiện tại: {{count}} giờ gần nhất."
+      }
+    },
+    "company": {
+      "title": "Cài đặt công ty",
+      "noCompanySelected": "Chưa chọn công ty. Chọn một công ty từ bộ chuyển ở trên.",
+      "companyName": "Tên công ty",
+      "companyNameHint": "Tên hiển thị cho công ty của bạn.",
+      "description": "Mô tả",
+      "descriptionHint": "Mô tả tùy chọn hiển thị trong hồ sơ công ty.",
+      "descriptionPlaceholder": "Mô tả công ty tùy chọn",
+      "appearance": "Giao diện",
+      "logo": "Logo",
+      "logoHint": "Tải lên hình logo định dạng PNG, JPEG, WEBP, GIF hoặc SVG.",
+      "removingLogo": "Đang gỡ...",
+      "removeLogo": "Gỡ logo",
+      "logoUploadFailed": "Tải lên logo thất bại",
+      "uploadingLogo": "Đang tải lên logo...",
+      "brandColor": "Màu thương hiệu",
+      "brandColorHint": "Đặt tông màu cho biểu tượng công ty. Để trống để tự động tạo màu.",
+      "brandColorAuto": "Tự động",
+      "clear": "Xóa",
+      "attachmentSizeLimit": "Giới hạn kích thước tệp đính kèm",
+      "attachmentSizeLimitHint": "Phạm vi chấp nhận: 1-{{max}} MiB.",
+      "mib": "MiB",
+      "attachmentSizeLimitError": "Nhập số nguyên từ 1 đến {{max}}.",
+      "saving": "Đang lưu...",
+      "saveChanges": "Lưu thay đổi",
+      "saved": "Đã lưu",
+      "saveFailed": "Lưu thất bại",
+      "hiring": "Tuyển dụng",
+      "requireBoardApproval": "Yêu cầu ban điều hành phê duyệt cho các nhân sự mới",
+      "requireBoardApprovalHint": "Các agent mới được tuyển vẫn ở trạng thái chờ cho đến khi ban điều hành phê duyệt.",
+      "companyPackages": "Gói công ty",
+      "importExportMovedPrefix": "Nhập và xuất đã được chuyển sang các trang riêng có thể truy cập từ tiêu đề",
+      "orgChart": "Sơ đồ tổ chức",
+      "importExportMovedSuffix": ".",
+      "sendToCloud": "Gửi đến Paperclip Cloud",
+      "export": "Xuất",
+      "import": "Nhập",
+      "dangerZone": "Vùng nguy hiểm",
+      "archiveDescription": "Lưu trữ công ty này để ẩn nó khỏi thanh bên. Điều này được lưu trong cơ sở dữ liệu.",
+      "archiveConfirm": "Lưu trữ công ty \"{{name}}\"? Nó sẽ bị ẩn khỏi thanh bên.",
+      "archiving": "Đang lưu trữ...",
+      "alreadyArchived": "Đã lưu trữ",
+      "archiveCompany": "Lưu trữ công ty",
+      "archiveFailed": "Lưu trữ công ty thất bại"
+    }
   }
 }
