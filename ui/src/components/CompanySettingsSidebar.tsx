@@ -21,6 +21,7 @@ import { instanceSettingsApi } from "@/api/instanceSettings";
 import { pluginsApi } from "@/api/plugins";
 import { ApiError } from "@/api/client";
 import { Link, NavLink } from "@/lib/router";
+import { useTranslation } from "@/i18n";
 import { INSTANCE_SETTINGS_PATH_PREFIX } from "@/lib/instance-settings";
 import { SIDEBAR_SCROLL_RESET_STATE } from "@/lib/navigation-scroll";
 import { queryKeys } from "@/lib/queryKeys";
@@ -42,6 +43,7 @@ function isSandboxProviderOnly(plugin: PluginRecord): boolean {
 }
 
 export function CompanySettingsSidebar() {
+  const { t } = useTranslation();
   const { selectedCompany, selectedCompanyId } = useCompany();
   const { isMobile, setSidebarOpen } = useSidebar();
   const { slots: companySettingsPluginSlots } = usePluginSlots({
@@ -89,33 +91,33 @@ export function CompanySettingsSidebar() {
           className="flex items-center gap-1.5 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground"
         >
           <ChevronLeft className="h-3.5 w-3.5 shrink-0" />
-          <span className="truncate">{selectedCompany?.name ?? "Company"}</span>
+          <span className="truncate">{selectedCompany?.name ?? t("sidebar.companyFallback", { defaultValue: "Company" })}</span>
         </Link>
         <div className="flex items-center gap-2 px-2 py-1">
           <Settings className="h-4 w-4 text-muted-foreground shrink-0" />
           <span className="flex-1 truncate text-sm font-bold text-foreground">
-            Company Settings
+            {t("sidebar.companySettingsTitle", { defaultValue: "Company Settings" })}
           </span>
         </div>
       </div>
 
       <nav className="flex-1 min-h-0 overflow-y-auto scrollbar-auto-hide px-3 py-2">
         <div className="px-3 pb-1 text-(length:--text-micro) font-semibold uppercase tracking-wide text-muted-foreground">
-          Company settings
+          {t("sidebar.companySettingsSection", { defaultValue: "Company settings" })}
         </div>
         <div className="flex flex-col gap-0.5">
-          <SidebarNavItem to="/company/settings" label="General" icon={SlidersHorizontal} end />
+          <SidebarNavItem to="/company/settings" label={t("settings.nav.general", { defaultValue: "General" })} icon={SlidersHorizontal} end />
           {showCloudUpstream ? (
             <SidebarNavItem
               to="/company/settings/cloud-upstream"
-              label="Cloud upstream"
+              label={t("sidebar.nav.cloudUpstream", { defaultValue: "Cloud upstream" })}
               icon={CloudUpload}
               end
             />
           ) : null}
           <SidebarNavItem
             to="/company/settings/members"
-            label="Members"
+            label={t("sidebar.nav.members", { defaultValue: "Members" })}
             icon={Users}
             badge={badges?.joinRequests ?? 0}
             end
@@ -131,51 +133,51 @@ export function CompanySettingsSidebar() {
                 end
               />
             ))}
-          <SidebarNavItem to="/company/settings/invites" label="Invites" icon={MailPlus} end />
-          <SidebarNavItem to="/company/settings/secrets" label="Secrets" icon={KeyRound} end />
+          <SidebarNavItem to="/company/settings/invites" label={t("sidebar.nav.invites", { defaultValue: "Invites" })} icon={MailPlus} end />
+          <SidebarNavItem to="/company/settings/secrets" label={t("sidebar.nav.secrets", { defaultValue: "Secrets" })} icon={KeyRound} end />
         </div>
         <div className="mt-5 px-3 pb-1 text-(length:--text-micro) font-semibold uppercase tracking-wide text-muted-foreground">
-          Instance settings
+          {t("settings.nav.instanceSettings", { defaultValue: "Instance settings" })}
         </div>
         <div className="flex flex-col gap-0.5">
           <SidebarNavItem
             to={`${INSTANCE_SETTINGS_PATH_PREFIX}/profile`}
-            label="Profile"
+            label={t("sidebar.nav.profile", { defaultValue: "Profile" })}
             icon={UserRoundPen}
             end
           />
           <SidebarNavItem
             to={`${INSTANCE_SETTINGS_PATH_PREFIX}/general`}
-            label="General"
+            label={t("settings.nav.general", { defaultValue: "General" })}
             icon={SlidersHorizontal}
             end
           />
           <SidebarNavItem
             to={`${INSTANCE_SETTINGS_PATH_PREFIX}/environments`}
-            label="Environments"
+            label={t("sidebar.nav.environments", { defaultValue: "Environments" })}
             icon={MonitorCog}
             end
           />
           <SidebarNavItem
             to={`${INSTANCE_SETTINGS_PATH_PREFIX}/access`}
-            label="Access"
+            label={t("sidebar.nav.access", { defaultValue: "Access" })}
             icon={Shield}
             end
           />
           <SidebarNavItem
             to={`${INSTANCE_SETTINGS_PATH_PREFIX}/heartbeats`}
-            label="Heartbeats"
+            label={t("sidebar.nav.heartbeats", { defaultValue: "Heartbeats" })}
             icon={Clock3}
             end
           />
           <SidebarNavItem
             to={`${INSTANCE_SETTINGS_PATH_PREFIX}/experimental`}
-            label="Experimental"
+            label={t("sidebar.nav.experimental", { defaultValue: "Experimental" })}
             icon={FlaskConical}
           />
           <SidebarNavItem
             to={`${INSTANCE_SETTINGS_PATH_PREFIX}/plugins`}
-            label="Plugins"
+            label={t("sidebar.nav.plugins", { defaultValue: "Plugins" })}
             icon={Puzzle}
           />
           {sidebarPlugins.length > 0 ? (
@@ -201,7 +203,7 @@ export function CompanySettingsSidebar() {
           ) : null}
           <SidebarNavItem
             to={`${INSTANCE_SETTINGS_PATH_PREFIX}/adapters`}
-            label="Adapters"
+            label={t("sidebar.nav.adapters", { defaultValue: "Adapters" })}
             icon={Cpu}
           />
         </div>
